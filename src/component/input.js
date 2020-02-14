@@ -20,6 +20,7 @@ class Input extends Component {
       } = this.props
       return (
         <div className="container center">
+          <div className="row">
           <form onSubmit={handleSubmit}>
   
             {///name
@@ -54,13 +55,19 @@ class Input extends Component {
               value={nickname}
               onChange={handleChangenickname}
             ></input>
-            {
+
+{
               edititem ?
                 <button type="submit" style={{ margin: '10px' }} className="btn btn-warning" >edit item</button> :
                 <button type="submit" style={{ margin: '10px' }} className="btn btn-success" >Save item</button>
-            }
+            } 
+            </form>
+            <div>
+
             <button onClick={handleCancel} style={{ margin: '10px' }} className="btn btn-danger" > Cancel </button>
-          </form>
+            </div>
+            </div>
+         
         </div>
       )
     }
